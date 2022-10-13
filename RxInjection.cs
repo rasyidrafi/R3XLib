@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Diagnostics;
 using System.IO;
+using System.Reflection;
 using System.Runtime.InteropServices;
 using System.Text;
 
@@ -33,7 +34,6 @@ namespace R3xLib
             {
             }
 
-
             #region Injector
             private bool bInject(uint pToBeInjected, string sDllPath)
             {
@@ -52,7 +52,6 @@ namespace R3xLib
                 CloseHandle(num1);
                 return true;
             }
-
             public RxInjectionResult Inject(string sProcName, string sDllPath)
             {
                 if (!File.Exists(sDllPath))
