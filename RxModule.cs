@@ -35,13 +35,13 @@ namespace R3xLib
                 throw new Exception("Failed to download");
             }
 
-            string shaOnline = wc.DownloadString(RxSettings.ModuleSha).Trim();
+          /*  string shaOnline = wc.DownloadString(RxSettings.ModuleSha).Trim();
             bool valid = RxFunction.SHA256Verify(RxSettings.ModulePath, shaOnline);
 
             if (!valid)
             {
                 throw new Exception("Invalid Sha SUM, Please download from official site");
-            }
+            }*/
 
             wc.DownloadFile(RxSettings.ModuleVer, RxSettings.ModuleVerPath);
             return;
